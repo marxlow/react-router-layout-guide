@@ -1,13 +1,20 @@
 import React from "react";
-import "./App.css";
 
-function App() {
+// Layouts
+import PublicLayout from "./shared/layout/PublicLayout";
+// import AuthLayout from './shared/layout/AuthLayout';
+
+// Public pages
+import LoginPage from "./pages/LoginPage";
+
+// Authenticated pages
+
+const App = () => {
   return (
-    <div>
-      <span>Heloo world</span>
-      <span>Heloo world</span>
-    </div>
+    <PublicLayout>
+      <LoginPage />
+    </PublicLayout>
   );
-}
+};
 
 export default App;

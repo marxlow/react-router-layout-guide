@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.public-container {
+  height: 100vh;
+  background-image: url("./shared/assets/images/mountain_background.png");
+  background-size: cover;
+}
