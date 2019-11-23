@@ -5,6 +5,8 @@ import routes from "../routes";
 const LoginPage = props => {
   const { getFieldDecorator } = props.form;
   const handleSubmit = () => {
+    // Set token into localstorage
+    localStorage.setItem("token", "I am now logged in");
     props.history.push(routes.dashboard);
   };
   return (

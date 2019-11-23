@@ -1,16 +1,27 @@
 import React from "react";
-import { Row, Layout, Button, Dropdown, Icon, Menu } from "antd";
+import { message, Row, Layout, Button, Dropdown, Icon, Menu } from "antd";
 import routes from "../../routes";
 
 const { Header, Content } = Layout;
 
 class AuthLayout extends React.Component {
+  componentDidMount() {
+    if (!localStorage.getItem("token")) {
+      // User is not logged in. Redirect back to login
+      this.props.history.push(routes.login);
+      message.warning("Please login first");
+      return;
+    }
+    // Fetch data for logged in user using token
+  }
+
   onLogout = () => {
+    // Remove token & other stored data
+    localStorage.clear();
     this.props.history.push(routes.login);
   };
 
   render() {
-    console.log("> Props:", this.props);
     return (
       <Layout>
         <Header
@@ -27,6 +38,7 @@ class AuthLayout extends React.Component {
             justify="end"
             style={{ height: "100%" }}
           >
+            {/* Dropdown with option to logout */}
             <Dropdown
               overlay={
                 <Menu>
@@ -45,7 +57,7 @@ class AuthLayout extends React.Component {
           </Row>
         </Header>
 
-        <Content style={{ padding: "0 50px", marginTop: 64 }}>
+        <Content style={{ padding: "0 50px", marginTop: 64, height: "100vh" }}>
           {this.props.children}
         </Content>
       </Layout>
