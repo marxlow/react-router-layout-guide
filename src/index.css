@@ -17,3 +17,10 @@ code {
   background-image: url("./shared/assets/images/mountain_background.png");
   background-size: cover;
 }
+
+.primary-btn:focus,
+.primary-btn:hover,
+.primary-btn:active {
+  color: white;
+  border-color: white;
+}

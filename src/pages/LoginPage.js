@@ -1,10 +1,11 @@
 import React from "react";
 import { Card, Form, Input, Button } from "antd";
+import routes from "../routes";
 
 const LoginPage = props => {
   const { getFieldDecorator } = props.form;
   const handleSubmit = () => {
-    console.log("> Submitted Form");
+    props.history.push(routes.dashboard);
   };
   return (
     <>

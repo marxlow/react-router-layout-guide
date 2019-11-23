@@ -43,7 +43,7 @@ const App = () => {
               exact={exact}
               path={path}
               component={props => (
-                <Layout>
+                <Layout history={props.history}>
                   <Component {...props} />
                 </Layout>
               )}

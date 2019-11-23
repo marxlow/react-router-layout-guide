@@ -1,43 +1,53 @@
 import React from "react";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { Row, Layout, Button, Dropdown, Icon, Menu } from "antd";
+import routes from "../../routes";
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 class AuthLayout extends React.Component {
-  state = {
-    isLoading: false
+  onLogout = () => {
+    this.props.history.push(routes.login);
   };
 
   render() {
-    const { isLoading } = this.state;
+    console.log("> Props:", this.props);
     return (
       <Layout>
-        <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-          <div className="logo" />
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={["2"]}
-            style={{ lineHeight: "64px" }}
+        <Header
+          style={{
+            position: "fixed",
+            zIndex: 1,
+            width: "100%",
+            backgroundColor: "#003f3a"
+          }}
+        >
+          <Row
+            type="flex"
+            align="middle"
+            justify="end"
+            style={{ height: "100%" }}
           >
-            <Menu.Item key="1">nav 1</Menu.Item>
-            <Menu.Item key="2">nav 2</Menu.Item>
-            <Menu.Item key="3">nav 3</Menu.Item>
-          </Menu>
+            <Dropdown
+              overlay={
+                <Menu>
+                  <Menu.Item key="1" onClick={this.onLogout}>
+                    <Icon type="logout" />
+                    Logout
+                  </Menu.Item>
+                </Menu>
+              }
+              trigger={["click"]}
+            >
+              <Button ghost className="primary-btn">
+                User@gmail.com <Icon type="down" />
+              </Button>
+            </Dropdown>
+          </Row>
         </Header>
+
         <Content style={{ padding: "0 50px", marginTop: 64 }}>
-          <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
-          <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
-            Content
-          </div>
+          {this.props.children}
         </Content>
-        <Footer style={{ textAlign: "center" }}>
-          Ant Design ©2018 Created by Ant UED
-        </Footer>
       </Layout>
     );
   }
