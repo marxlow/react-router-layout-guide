@@ -19,7 +19,7 @@ const LoginPage = props => {
           width: 400
         }}
       >
-        <h1 style={{ textAlign: "center" }}>Routes Guide</h1>
+        <h1 style={{ textAlign: "center" }}>React Routing Guide</h1>
         <Form
           hideRequiredMark
           colon={false}
@@ -29,7 +29,7 @@ const LoginPage = props => {
           <Form.Item label="Email">
             {getFieldDecorator("email", {
               rules: [{ required: true, message: "Email required" }]
-            })(<Input size="large" placeholder="JohnDoe@example.com" />)}
+            })(<Input size="large" placeholder="John@example.com" />)}
           </Form.Item>
           <Form.Item label="Password">
             {getFieldDecorator("password", {

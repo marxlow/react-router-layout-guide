@@ -12,6 +12,7 @@ import LoginPage from "./pages/LoginPage";
 
 // Authenticated pages
 import DashboardPage from "./pages/DashboardPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const pages = [
   // Public pages
@@ -21,7 +22,7 @@ const pages = [
     component: LoginPage,
     layout: PublicLayout
   },
-  // Auth pages
+  // Authenticated pages
   {
     exact: false,
     path: routes.dashboard,
@@ -51,6 +52,8 @@ const App = () => {
           )
         )}
         <Redirect to={routes.dashboard} />
+        {/* Or Uncomment below to use a custom 404 page */}
+        {/* <Route component={NotFoundPage} /> */}
       </Switch>
     </Router>
   );
