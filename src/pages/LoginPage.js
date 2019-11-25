@@ -19,7 +19,7 @@ const LoginPage = props => {
           width: 400
         }}
       >
-        <h1 style={{ textAlign: "center" }}>React Routing Guide</h1>
+        <h1 style={{ textAlign: "center" }}>React routing guide</h1>
         <Form
           hideRequiredMark
           colon={false}
