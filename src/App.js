@@ -12,7 +12,8 @@ import LoginPage from "./pages/LoginPage";
 
 // Authenticated pages
 import DashboardPage from "./pages/DashboardPage";
-import NotFoundPage from "./pages/NotFoundPage";
+// Uncomment below to use a custom 404 page
+// import NotFoundPage from "./pages/NotFoundPage";
 
 const pages = [
   // Public pages
@@ -43,7 +44,7 @@ const App = () => {
               key={index}
               exact={exact}
               path={path}
-              component={props => (
+              render={props => (
                 <Layout history={props.history}>
                   <Component {...props} />
                 </Layout>

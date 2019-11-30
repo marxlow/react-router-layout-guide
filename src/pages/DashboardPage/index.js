@@ -9,6 +9,7 @@ import SettingsView from "./SettingsView";
 import StatisticsView from "./StatisticsView";
 
 const DashboardPage = () => {
+  const user = { name: "Hello world" };
   return (
     <Switch>
       <RouteWithProps exact path={routes.dashboard} component={SplashView} />
@@ -16,6 +17,7 @@ const DashboardPage = () => {
       <RouteWithProps
         exact
         path={routes.statistics}
+        extraProps={{ loggedInUser: user }}
         component={StatisticsView}
       />
     </Switch>
