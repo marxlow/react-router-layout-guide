@@ -4,7 +4,7 @@ import { Switch } from "react-router-dom";
 import RouteWithProps from "../../shared/routes/RouteWithProps";
 import routes from "../../routes";
 
-import SplashView from "./SplashView";
+import DashboardView from "./DashboardView";
 import SettingsView from "./SettingsView";
 import StatisticsView from "./StatisticsView";
 
@@ -12,7 +12,7 @@ const DashboardPage = () => {
   const user = { name: "Hello world" };
   return (
     <Switch>
-      <RouteWithProps exact path={routes.dashboard} component={SplashView} />
+      <RouteWithProps exact path={routes.dashboard} component={DashboardView} />
       <RouteWithProps exact path={routes.settings} component={SettingsView} />
       <RouteWithProps
         exact

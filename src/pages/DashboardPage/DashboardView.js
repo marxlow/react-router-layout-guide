@@ -3,7 +3,7 @@ import { Alert, Row, Button } from "antd";
 
 import routes from "../../routes";
 
-const SplashView = props => {
+const DashboardView = props => {
   const goToSettingsPage = () => {
     props.history.push(routes.settings);
   };
@@ -37,4 +37,4 @@ const SplashView = props => {
   );
 };
 
-export default SplashView;
+export default DashboardView;
