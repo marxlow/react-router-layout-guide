@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+
+Source code for the tutorial written on Medium: https://medium.com/javascript-in-plain-english/the-only-react-router-set-up-you-will-ever-need-9f36ddee03a5
 
 ## Available Scripts
 
