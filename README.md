@@ -1,15 +1,16 @@
-## Introduction
+## Welcome
 
-Source code for the tutorial written on Medium: https://medium.com/javascript-in-plain-english/the-only-react-router-set-up-you-will-ever-need-9f36ddee03a5
+A React web app with a mature react-router setup. Clone this for a head-start for any project.
 
-## Available Scripts
+![App in action](https://media.giphy.com/media/QWwGHPHlF3Xs6V8xf4/giphy.gif)
 
-In the project directory, you can run:
+## Setup
 
-### `yarn start`
+None -- You are good to go!
 
-Runs the app in the development mode.<br />
+## Starting the app
+
+### `npm run start`
+
+Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
